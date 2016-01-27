@@ -7,23 +7,17 @@ describe('Word', function() {
   });
 
   it("will provide a word from an array to use", function(){
-    var testWord = new Word ("Ball", "cool")
+    var testWord = new Word ("Ball", "cool");
     expect(words.includes(testWord.wordUse())).to.equal(true);
   });
+
   it("splits word into individual letters", function(){
-    var testSplit = new Split ("Ball")
-    expect(testSplit.wordSplit).to.eql[("B", "a", "l", "l")];
+    var testWord = new Word ("Ball");
+    expect(testWord.splitWord).to.eql[("B", "a", "l", "l")];
   });
+
 });
 
-// describe('Split', function() {
-//   it()
-// });
-
-  // it("splits word into individual letters", function(){
-  //   var testSplit = new Split ("Ball")
-  //   expect(testSplit.wordSplit).to.eql[("B", "a", "l", "l")];
-  // });
 
 
 

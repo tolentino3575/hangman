@@ -1,19 +1,22 @@
-function Word(newWord) {
+function Word(newWord, splitWord) {
   this.newWord = newWord;
+  this.splitWord = splitWord;
 };
 
-Word.prototype.wordUse = function (){
+Word.prototype.wordUse = function() {
   var words = ["code", "cool", "easy"];
     return words[Math.floor(Math.random() * words.length)];
     console.log(words)
+    var word = words();
   };
 
-function Split(wordSplit) {
-  this.wordSplit = wordSplit;
-}
+Word.prototype.splitWord = function() {
+  var string = word;
+  var result = string.split("");
+    return result;
+};
 
-// Split.prototype.wordSplit = function (){
-// };
+
 
 
 
