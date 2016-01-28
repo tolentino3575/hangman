@@ -1,35 +1,26 @@
-var words = ["code", "cool", "easy"];
-
-describe('Word', function() {
+describe('wordUse', function() {
   it("will provide a word for the game", function(){
-    var testWord = new Word ("Ball");
-    expect(words.includes(testWord.newWord)).to.equal(false);
+    var testGame = new Game();
+    testGame.wordUse();
+    expect(testGame.gameWord).to.equal("code" || "easy" || "cool");
   });
-
-  it("will provide a word from an array to use", function(){
-    var testWord = new Word ("Ball", "cool");
-    expect(words.includes(testWord.wordUse())).to.equal(true);
-  });
-
-  it("splits word into individual letters", function(){
-    var testWord = new Word ("Ball");
-    expect(testWord.splitWord).to.eql[("B", "a", "l", "l")];
-  });
-
 });
 
+describe('Game', function() {
+  it("splits word into individual letters", function(){
+    var testGame = new Game ();
+    testGame.wordUse();
+    testGame.splitWord();
+    expect(testGame.splitSave).to.eql[("B", "a", "l", "l")];
+  });
 
+  it("will change individual letters into '_'", function(){
+    var testGame = new Game ("B", "a", "l", "l");
+    expect(testGame.makeBlank).to.eql[("_", "_", "_", "_")];
+  });
 
-
-
-
-// describe('Count', function(){
-//   it("count the number of individual letters", function(){
-//     var testCount = new Count ("B", "a", "l", "l")
-//     expect(testCount.wordCount).to.equal(4);
-//   });
-
-    // it("counts number of individual letters", function(){
-    //
-    //
-    // });
+  it("will check the guessed letter against each letter in the array", function() {
+    var testGame = new Game ();
+    expect(testGame.guess).to.equal
+  });
+});

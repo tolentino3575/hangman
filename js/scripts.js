@@ -1,26 +1,31 @@
-function Word(newWord, splitWord) {
-  this.newWord = newWord;
-  this.splitWord = splitWord;
+function Game() {
+  this.gameWord = "";
+  this.splitSave = [];
+  this.putLines = [];
+  this.guess = guess;
 };
 
-Word.prototype.wordUse = function() {
+Game.prototype.wordUse = function() {
   var words = ["code", "cool", "easy"];
-    return words[Math.floor(Math.random() * words.length)];
-    console.log(words)
-    var word = words();
+    console.log(words);
+  var randomWord= words[Math.floor(Math.random() * words.length)];
+  this.gameWord = randomWord;
   };
 
-Word.prototype.splitWord = function() {
-  var string = word;
+Game.prototype.splitWord = function() {
+  var string = this.gameWord;
   var result = string.split("");
-    return result;
+  this.splitSave = result;
 };
 
+Game.prototype.makeBlank = function() {
+  var letters = splitResult;
+  var underscore = letters.splice(0, -1, '_');
+  this.putLines = underscore;
+};
 
+Game.prototype.guess = function() {
+  if (this.splitSave.indexOf(X)){
 
-
-
-
-// function Count(wordCount) {
-//   this.wordCount = wordCount;
-// }
+  }
+}
